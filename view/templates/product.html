@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+
+<h1>{{book.title}}</h1>
+<img ng-src="{{book.image}}">
+<h3>Price: {{book.price || currency}}</h3>
+<h3>Rating: {{book.rating}}</h3>
+<h3>Released: {{book.release_date}}</h3>
+
+<h3>Short Description</h3>
+<p>{{book.short_description}}</p>
+<h3>Long Description</h3>
+<p>{{book.long_description}}</p>
+
+<img ng-src="{{book.author_image}}" alt="">
+<h3>{{book.author}}</h3>

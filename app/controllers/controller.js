@@ -11,37 +11,35 @@ angular.module('productApp')
         }, function (reason) {
             console.log("Failed because of: ", reason);
         });
+    }])
+    .controller('CategoryController', ['$scope', '$stateParams', 'categoryService', 'productService', function ($scope, $stateParams, categoryService, productService) {
 
-        $scope.goToCategory = function(id) {
+        $scope.id = $stateParams.categoryId;
 
-            $scope.categoryId = id;
-            var promiseCategory = categoryService.getCategoryById(id);
-            promiseCategory.then(function (data) {
-                $scope.category = data;
-                console.log("categories", $scope.category);
-            }, function (reason) {
-                console.log("Failed because of: ", reason);
-            });
+        var promiseCategory = categoryService.getCategoryById($scope.id);
+        promiseCategory.then(function (data) {
+            $scope.category = data;
+        }, function (reason) {
+            console.log("Failed because of: ", reason);
+        });
 
-
-
-            // $scope.categoryId = id;
-            console.log($scope.categoryId);
-        };
-
-
-
-
+        var promiseBooks = productService.getBookByCategory($scope.id);
+        promiseBooks.then(function(data) {
+            $scope.books = data;
+            console.log($scope.books);
+        }, function (reason) {
+            console.log("Failed because of: ", reason);
+        });
 
     }])
-    .controller('CategoryController', ['$scope', '$stateParams', function ($scope, $stateParams) {
-        // console.log("we are at ", $stateParams.categoryId);
-        $scope.id = $stateParams;
-        console.log($scope.id);
-    }])
+    .controller('ProductController', ['$scope', '$stateParams', 'productService', function($scope, $stateParams, productService) {
+        $scope.id = $stateParams.productId;
 
-    .component('category', {
-        bindings: {},
-        template: {}
-    });
+        var promiseBook = productService.getBookById($scope.id);
+        promiseBook.then(function(data) {
+            $scope.book = data;
+        }, function (reason) {
+            console.log("Failed because of: ", reason);
+        });
+    }]);
 

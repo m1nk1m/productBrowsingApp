@@ -1,0 +1,35 @@
+* {
+    margin: 0 auto;
+    max-width: 80em;
+}
+
+.wrapper {
+    border: 1px solid black;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+}
+
+.category_image {
+    background-size: cover;
+    width: 50%;
+}
+
+.category_item {
+    text-align: center;
+}
+
+#category {
+    width: 50%;
+    float: left;
+}
+
+#product {
+    width: 50%;
+    float: left;
+}

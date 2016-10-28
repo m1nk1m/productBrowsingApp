@@ -1,3 +1,27 @@
-<section>
-    <h1>Category</h1>
+<!--<div ng-click="$window.history.back();">Back</div>-->
+<div back-button="">Back</div>
+<section id="category">
+    <h1 class="text-center">{{category.title}}</h1>
+
+    <div class="row">
+        <div class="col-md-6 category_item" ng-repeat="book in books">
+            <a ui-sref="category.product({productId: book._id})">
+                <img ng-src="{{book.image}}" alt="" class="category_image">
+                <div>{{book.title}}</div>
+            </a>
+        </div>
+    </div>
 </section>
+
+<section id="product">
+    <ui-view></ui-view>
+</section>
+
+<!--<section id="categories">-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-6 category_item" ng-repeat="category in categories">-->
+            <!--<h3>{{category.title}}</h3>-->
+            <!--<a ui-sref="category({categoryId: category._id})"><img class="category_image" ng-src="{{category.image}}" alt=""></a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->

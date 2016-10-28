@@ -5,43 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <title>Document</title>
 </head>
 <body ng-app="productApp">
-
-
-
-
-<!--<div ng-controller="mainController">-->
-    <!--<section id="categories">-->
-        <!--<ul>-->
-            <!--<li ng-repeat="category in categories" ng-click="goToCategory(category._id)">-->
-                <!--<div>{{category.title}}</div>-->
-                <!--<div><img ng-src="{{category.image}}" src="" alt=""></div>-->
-                <!--<a ui-sref="category({categoryId: category.id})"></a>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</section>-->
-
-    <ui-view></ui-view>
-
-
-
-
-    <!--<section>-->
-        <!--<ul>-->
-            <!--<li ng-repeat="book in books">{{book.rating}}</li>-->
-        <!--</ul>-->
-    <!--</section>-->
-</div>
-
-
+    <div class="wrapper">
+        <ui-view></ui-view>
+    </div>
 <script src="../app/js/angular.js"></script>
 <script src="../app/js/angular-ui-router.js"></script>
 <script src="../app/app.js"></script>
+<script src="../app/directives/directive.js"></script>
 <script src="../app/services/product.js"></script>
 <script src="../app/services/category.js"></script>
-<script src="../app/factories/factory.js"></script>
 <script src="../app/controllers/controller.js"></script>
 <script src="../app/routes.js"></script>
 </body>

@@ -18,7 +18,7 @@ angular.module('productApp')
             })
             .state('category.product', {
                 url:'/{productId}',
-                templateUrl: 'templates/details.html',
+                templateUrl: 'templates/product.html',
                 controller: 'ProductController'
             });
     }]);

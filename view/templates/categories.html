@@ -1,10 +1,8 @@
 <section id="categories">
-    <ul>
-        <li ng-repeat="category in categories">
-            <div>{{category.title}}</div>
-            <div><img ng-src="{{category.image}}" src="" alt=""></div>
-            <a ui-sref-active="active" ui-sref="category({categoryId: category._id})">this</a>
-            <!--ui-sref="details({itemID: item.id})"-->
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col-md-6 category_item" ng-repeat="category in categories">
+            <h3>{{category.title}}</h3>
+            <a ui-sref="category({categoryId: category._id})"><img class="category_image" ng-src="{{category.image}}" alt=""></a>
+        </div>
+    </div>
 </section>
