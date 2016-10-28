@@ -1,5 +1,4 @@
-<!--<div ng-click="$window.history.back();">Back</div>-->
-<div back-button="">Back</div>
+<a ui-sref="categories">Back</a>
 <section id="category">
     <h1 class="text-center">{{category.title}}</h1>
 
@@ -17,11 +16,3 @@
     <ui-view></ui-view>
 </section>
 
-<!--<section id="categories">-->
-    <!--<div class="row">-->
-        <!--<div class="col-md-6 category_item" ng-repeat="category in categories">-->
-            <!--<h3>{{category.title}}</h3>-->
-            <!--<a ui-sref="category({categoryId: category._id})"><img class="category_image" ng-src="{{category.image}}" alt=""></a>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</section>-->
