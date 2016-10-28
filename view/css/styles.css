@@ -4,7 +4,7 @@
 }
 
 .wrapper {
-    border: 1px solid black;
+
 }
 
 li {
@@ -32,4 +32,14 @@ a {
 #product {
     width: 50%;
     float: left;
+}
+
+.product_col {
+    width: 50%;
+    float: left;
+}
+
+
+.product_image {
+    width: 90%;
 }
