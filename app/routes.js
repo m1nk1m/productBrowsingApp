@@ -3,8 +3,6 @@
  */
 angular.module('productApp')
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/app');
-
         $stateProvider
             .state('categories', {
                 url:'/categories',
